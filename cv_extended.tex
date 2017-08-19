@@ -1,0 +1,200 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+%\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+
+\pagestyle{empty} % non-numbered pages
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Nate \textsc{Holland}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Phone:}     		& (512) 963-8034 \\
+    \textsc{Email:}     		& \href{mailto:natesholland@gmail.com}{natesholland@gmail.com} \\
+		\textsc{Social Media:}	& @natesholland
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+ ShippingEasy & \textbf{Senior Platform Engineer} \\
+ \textsc{Jun 2017 - Present} &
+	\footnotesize{
+		$\cdot$ Developed AWS autoscaling logic for web servers and long running job servers.
+
+		$\cdot$ Added logic to allow customers to authenticate with third parties from any datacenter.
+
+		$\cdot$ Created integration with 3rd party platform to open up potential for more customers.
+	}
+	\\\multicolumn{2}{c}{} \\
+
+	Indeed & \textbf{Software Engineer - Search Quality} \\
+	\textsc{Nov 2016 - Jul 2017} &
+	 \footnotesize{
+		 $\cdot$ Worked on A - B tests for various aspects of job hiring.
+
+		 $\cdot$ Created model for evaluating job experience and education requirements.
+	 }
+	 \\\multicolumn{2}{c}{} \\
+
+	 Spiceworks & \textbf{Senior Software Developer} \\
+	 \textsc{Jun 2016 - Nov 2016} &
+		\footnotesize{
+			$\cdot$ Lead team to continue working on creating infrastructure for Service Oriented Architecture.
+
+			$\cdot$ Architected and oversaw development of multiple microservices.
+
+			$\cdot$ Lead efforts to upgrade underlying Java, Jruby, and Rails versions of legacy applications.
+
+			$\cdot$ Migrated CI backend from Jenkins to Gitlab CI.
+
+			$\cdot$ Performed code reviews, created curriculum, and lead training for full time employees and intern classes.
+		}
+		\\\multicolumn{2}{c}{} \\
+
+	Spiceworks & \textbf{Software Developer} \\
+	\textsc{Feb 2015 - Jun 2016} &
+	 \footnotesize{
+
+		 $\cdot$ Became Dev Lead of growing team focusing on Spiceworks Accounts application. Became first team inside company to achieve true CI/CD using the Github Pull Request Flow.
+
+		 $\cdot$ Sped test suite of legacy app up to increase organization productivity. Used Docker to parallelize test suite and make individual runs 400% faster as well as increase system throughput by 50% while using same CI hardware.
+
+		 $\cdot$
+		 Led effort refactoring legacy rails app and upgrading from Rails 3.2 to 4.1 (500k lines of ruby code)
+
+		 $\cdot$
+		 Worked on separating service out of Monolith to create Service Oriented Architecture.
+
+		 $\cdot$
+		 Responsible for uptime of multiple revenue generating services.
+
+		 $\cdot$
+		 Integrated Oauth2 with third parties as both a client and provider.
+
+	 }
+	 \\\multicolumn{2}{c}{} \\
+
+ Spiceworks & \textbf{Software Development Intern} \\
+ \textsc{May 2014 - Jan 2015} &
+	\footnotesize{
+		Lead on creating user authentication service and breaking monolithic web app
+		into Service Oriented Architecture.
+	}
+	\\\multicolumn{2}{c}{} \\
+
+Intel & \textbf{Technical Intern} \\
+\textsc{May 2012 - May 2014} &
+ \footnotesize{
+	 Working on creating live online technical indicators to track progress
+	 internally using various database and online tools and frameworks.
+ }
+ \\\multicolumn{2}{c}{} \\
+
+Spiceworks & \textbf{Intern} \\
+\textsc{Summer 2011} &
+\footnotesize{
+	Worked on a fuel cell manufacturing machine to create membranes on a large
+	scale}
+	\\
+
+	\textsc{Summer 2010} &
+\footnotesize{
+	for hydrogen fuel cells. Skills used included controls as well as
+	milling and fabrication.
+}
+\\\multicolumn{2}{c}{} \\
+
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rp{11cm}}
+ \textsc{December} 2014 & B.A. In Computer Science, \textbf{University of California at Berkeley}\\
+ \textsc{Gpa}: 3.5 &
+ \footnotesize{
+	 Studied computer science with emphasis on extra upper
+	 division math and machine learning courses.
+	 Graduated in 7 semesters while working part time throughout degree.
+}
+	 \\\multicolumn{2}{c}{} \\
+
+	\textsc{December} 2017 & M.S. In Computer Science, \textbf{Georgia Institute of Technology}\\
+	\textsc{Gpa}: 4.0 &
+	\footnotesize{
+Early participant in Georgia Tech's OMSCS program, studying for concentrations
+in Machine Learning and Interactive Intelligence.
+ }
+		\\\multicolumn{2}{c}{} \\
+
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Scholarships and Certificates}
+\begin{tabular}{rl}
+ \textsc{Sept.} 2006 & Scholarship for graduate students with an outstanding curriculum \footnotesize(\EURcr 30,000)\normalsize\\
+\end{tabular}
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+ \textsc{Italian:}&Mothertongue\\
+\textsc{English:}&Fluent\\
+\textsc{French:}&Basic Knowledge\\
+\end{tabular}
+
+\section{Computer Skills}
+\begin{tabular}{rl}
+Intermediate Knowledge:& \textsc{vba}, Excel, Word, PowerPoint
+\end{tabular}
+
+\section{Interests and Activities}
+Technology, Open-Source, Programming\\
+Paradoxes in Decision Making, Psychoanalysis, Behavioural Finance\\
+Football, Travelling
+
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}
